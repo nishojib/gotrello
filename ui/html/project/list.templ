@@ -1,0 +1,28 @@
+package projectui
+
+import (
+	"nishojib/gotrello/internal/data/models"
+	"nishojib/gotrello/ui/html/layout"
+	"fmt"
+)
+
+templ List(projects []models.Project) {
+	@layout.Main(true) {
+		<div class="container mx-auto mt-6">
+			<h2 class="text-xl font-bold">My Projects</h2>
+			<div class="grid w-full grid-cols-4 gap-2 mt-4">
+				for _, project := range projects {
+					<a href={ templ.SafeURL(fmt.Sprintf("/projects/%s", project.ID.String())) } class="space-y-2 text-center cursor-pointer">
+						<div class="flex shadow-xl group card bg-base-100 image-full">
+							<figure><img src="https://www.digitalsilk.com/wp-content/uploads/2020/06/website-development-process-hero-image.png.webp" alt="Shoes"/></figure>
+							<div class="self-center hidden card-body group-hover:block">
+								<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium expedita dolores itaque cupiditate labore fuga voluptatem reiciendis ea qui tempore!</p>
+							</div>
+						</div>
+						<h3 class="font-semibold">{ project.Name }</h3>
+					</a>
+				}
+			</div>
+		</div>
+	}
+}

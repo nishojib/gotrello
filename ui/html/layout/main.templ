@@ -1,0 +1,32 @@
+package layout
+
+import (
+	coreui "nishojib/gotrello/ui/html/core"
+)
+
+templ Main(nav bool) {
+	<!DOCTYPE html>
+	<html lang="en" data-theme="dark">
+		<head>
+			<title>GoTrello</title>
+			<meta charset="utf-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			<link rel="stylesheet" href="/static/css/styles.css"/>
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Courgette:400,700"/>
+			<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+		</head>
+		<body class="antialiased">
+			if nav {
+				@coreui.Navigation()
+			}
+			{ children... }
+			<script src="https://unpkg.com/htmx.org@1.9.11"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js" integrity="sha512-GWzVrcGlo0TxTRvz9ttioyYJ+Wwk9Ck0G81D+eO63BaqHaJ3YZX9wuqjwgfcV/MrB2PhaVX9DkYVhbFpStnqpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+			<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.2/Sortable.min.js" integrity="sha512-TelkP3PCMJv+viMWynjKcvLsQzx6dJHvIGhfqzFtZKgAjKM1YPqcwzzDEoTc/BHjf43PcPzTQOjuTr4YdE8lNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<script is:inline src="/static/js/dragAndDrop.js">
+                
+            </script>
+		</body>
+	</html>
+}

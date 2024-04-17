@@ -1,0 +1,8 @@
+.envrc
+.air.toml
+bin
+tmp
+node_modules
+package-lock.json
+*_templ.go*
+*_templ.txt*

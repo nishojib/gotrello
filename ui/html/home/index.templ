@@ -1,0 +1,22 @@
+package homeui
+
+import (
+	"nishojib/gotrello/ui/html/layout"
+)
+
+templ Index() {
+	@layout.Main(true) {
+		<div class="bg-[url('/static/images/wave.svg')] bg-cover">
+			<div class="container w-full min-h-[calc(100vh-65px)] mx-auto hero">
+				<div class="flex-col w-full hero-content lg:justify-between lg:flex-row-reverse">
+					<img src="/static/images/hero.svg" class="max-w-4xl" alt="hero image"/>
+					<div class="lg:ml-20">
+						<h1 class="text-4xl font-bold">Welcome to goTrello!</h1>
+						<p class="py-6">A Trello Clone made with Go, Templ, HTMX and AlpineJS.</p>
+						<a href="/projects" class="btn btn-primary">Get Started</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	}
+}

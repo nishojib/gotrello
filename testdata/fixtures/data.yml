@@ -1,0 +1,457 @@
+- model: Project
+  rows:
+    - _id: 'web'
+      name: 'Web Development'
+
+- model: Status
+  rows:
+    - _id: 'todo'
+      name: 'Tasks to Do'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'completed'
+      name: 'Completed Tasks'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'revise'
+      name: 'Topics/Concepts to Revise'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'learn'
+      name: 'Topics/Concepts to Learn'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'learning'
+      name: 'Useful Websites for Learning'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'youtube'
+      name: 'Web Dev YouTube Channels'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'codepen'
+      name: 'CodePen Ideas'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'website'
+      name: 'Practice Website Ideas'
+      project_id: '{{ $.Project.web.ID }}'
+    - _id: 'javascript'
+      name: 'JavaScript Project Ideas'
+      project_id: '{{ $.Project.web.ID }}'
+
+- model: Task
+  rows:
+    - name: 'Complete mock-up for client website'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 1
+    - name: 'Email mock-up to client for feedback'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 2
+    - name: 'Update personal website header background image'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 3
+    - name: 'Update personal website heading fonts'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 4
+    - name: 'Add google map to personal website'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 5
+    - name: 'Begin draft of CSS Grid article'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 6
+    - name: 'Read new CSS-Tricks articles'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 7
+    - name: 'Read new Smashing Magazine articles'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 8
+    - name: 'Read other bookmarked articles'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 9
+    - name: 'Look through portfolios to gather inspiration'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 10
+    - name: 'Create something cool for CodePen'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 11
+    - name: 'Post latest CodePen work on Twitter'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 12
+    - name: 'Listen to new Syntax.fm episode'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 13
+    - name: 'Listen to new CodePen Radio episode'
+      status_id: '{{ $.Status.todo.ID }}'
+      sort_order: 14
+    - name: 'Clear email inbox'
+      status_id: '{{ $.Status.completed.ID }}'
+      sort_order: 1
+    - name: 'Finalize requirements for client web design'
+      status_id: '{{ $.Status.completed.ID }}'
+      sort_order: 2
+    - name: 'Begin work on mock-up for client website'
+      status_id: '{{ $.Status.completed.ID }}'
+      sort_order: 3
+    - name: 'HTML Elements'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 1
+    - name: 'HTML Form Validation'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 2
+    - name: 'HTML Structured Data'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 3
+    - name: 'Advanced CSS Selectors'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 4
+    - name: 'CSS Transforms'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 5
+    - name: 'CSS Animations'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 6
+    - name: 'CSS Flexbox'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 7
+    - name: 'CSS Grid'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 8
+    - name: 'CSS Methodologies (BEM, SMACSS etc.)'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 9
+    - name: 'SASS/SCSS'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 10
+    - name: 'Layout Fallbacks'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 11
+    - name: 'Responsive Design'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 12
+    - name: 'Design Patterns'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 13
+    - name: 'JavaScript Fundamentals'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 14
+    - name: 'JavaScript OOP'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 15
+    - name: 'JavaScript DOM Manipulation'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 16
+    - name: 'JavaScript Debugging Techniques'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 17
+    - name: 'Node Package Manager'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 18
+    - name: 'Grunt/Gulp'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 19
+    - name: 'GitHub'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 20
+    - name: 'Git Commands'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 21
+    - name: 'Web Accessibility'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 22
+    - name: 'Web Performance'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 23
+    - name: 'Web Hosting'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 24
+    - name: 'Browser Dev Tools'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 25
+    - name: 'Google Analytics'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 26
+    - name: 'Basic Photoshop/Sketch Usage'
+      status_id: '{{ $.Status.revise.ID }}'
+      sort_order: 27
+    - name: 'HTML 5.2 New Features'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 1
+    - name: 'Responsive Images (picture element, srcset/sizes etc.)'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 2
+    - name: 'Serverless'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 3
+    - name: 'Variable Fonts'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 4
+    - name: 'Shadow DOM'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 5
+    - name: 'ES12+'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 7
+    - name: 'JSON & AJAX'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 8
+    - name: "API's"
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 9
+    - name: 'JavaScript Patterns'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 10
+    - name: 'JavaScript Testing'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 11
+    - name: 'jQuery'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 12
+    - name: 'SVG'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 13
+    - name: 'React JS'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 14
+    - name: 'Angular JS'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 15
+    - name: 'TypeScript'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 16
+    - name: 'Vue JS'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 17
+    - name: 'Node JS'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 18
+    - name: 'Webpack'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 19
+    - name: 'SEO Techniques'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 20
+    - name: 'HTML Emails'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 21
+    - name: 'WordPress'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 22
+    - name: 'Static Site Generators (Jekyll, Hugo, Gatsby etc.)'
+      status_id: '{{ $.Status.learn.ID }}'
+      sort_order: 23
+    - name: 'Code Academy'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 1
+    - name: 'CodePen'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 2
+    - name: 'Codrops'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 3
+    - name: 'CSS-Tricks'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 4
+    - name: 'Free Code Camp'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 5
+    - name: 'Khan Academy'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 6
+    - name: 'Lynda'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 7
+    - name: 'Medium'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 8
+    - name: 'Mozilla Developer Network'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 9
+    - name: 'Stack Overflow'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 10
+    - name: 'Team Treehouse'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 11
+    - name: 'Tuts Plus'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 12
+    - name: 'Udemy'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 13
+    - name: 'WPSessions'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 14
+    - name: 'YouTube'
+      status_id: '{{ $.Status.learning.ID }}'
+      sort_order: 15
+    - name: 'Adam Khoury'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 1
+    - name: 'Brad Hussey'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 2
+    - name: 'CSS-Tricks (Chris Coyier)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 3
+    - name: 'Derek Banas'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 4
+    - name: 'DevTips (Travis Neilson)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 5
+    - name: 'Free Code Camp'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 6
+    - name: 'Fun Fun Function (Mattias Petter Johansson)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 7
+    - name: 'Google Chrome Developers'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 8
+    - name: 'Layout Land (Jen Simmons)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 9
+    - name: 'Learn Code Academy'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 10
+    - name: 'Level Up Tuts (Scott Tolinski)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 11
+    - name: 'Mackenzie Child'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 12
+    - name: 'Rachel Andrew'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 13
+    - name: 'The Net Ninja (Shaun Pelling)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 14
+    - name: 'The New Boston (Bucky Roberts)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 15
+    - name: 'Traversy Media (Brad Traversy)'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 16
+    - name: 'Wes Bos'
+      status_id: '{{ $.Status.youtube.ID }}'
+      sort_order: 17
+    - name: 'Something cool with CSS Grid'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 1
+    - name: 'Something cool with CSS Flexbox'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 2
+    - name: 'Something cool with CSS animations'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 3
+    - name: 'Something cool with CSS gradients'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 4
+    - name: 'Something cool with CSS pseudo-elements'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 5
+    - name: 'Something cool with SVG'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 6
+    - name: 'Something cool with JavaScript'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 7
+    - name: 'Something cool with all of the above'
+      status_id: '{{ $.Status.codepen.ID }}'
+      sort_order: 8
+    - name: 'Airsoft/Paintballing Centre'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 1
+    - name: 'Bar/Pub'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 2
+    - name: 'Bicycle Shop/Repair'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 3
+    - name: 'Cafe/Coffee Shop'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 4
+    - name: 'Car Showroom/Garage/Repair/Parts'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 5
+    - name: 'Construction Company'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 6
+    - name: 'Fitness/Gym/Leisure Centre'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 7
+    - name: 'Nightclub'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 8
+    - name: 'Party Planning Company'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 9
+    - name: 'PC Build/Repair Service'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 10
+    - name: 'Portfolio/CV'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 11
+    - name: 'Real Estate/AirBnB'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 12
+    - name: 'Restaurant'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 13
+    - name: 'Skiing/Snowboarding Centre/Company'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 14
+    - name: 'Streaming Service for Movies/TV'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 15
+    - name: 'Streaming Service for Video Games'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 16
+    - name: 'Taxi Service'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 17
+    - name: 'Travel Agency'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 18
+    - name: 'Zoo/Safari Park'
+      status_id: '{{ $.Status.website.ID }}'
+      sort_order: 19
+    - name: 'Analog Clock'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 1
+    - name: 'Basic Quiz'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 2
+    - name: 'Bill/Cost Splitter'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 3
+    - name: 'Countdown Timer'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 4
+    - name: 'Form Validator'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 5
+    - name: 'Geo-location (Find places near you etc.)'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 6
+    - name: 'Gif Search'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 7
+    - name: 'Note Taking App'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 8
+    - name: 'Random Name Picker'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 9
+    - name: 'Secret Message Encoder/Decoder'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 10
+    - name: 'Sortable Image Gallery'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 11
+    - name: 'Sortable Table'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 12
+    - name: 'Tip Calculator'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 13
+    - name: 'To-Do List'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 14
+    - name: 'Unit Converter'
+      status_id: '{{ $.Status.javascript.ID }}'
+      sort_order: 15

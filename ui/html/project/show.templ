@@ -1,0 +1,140 @@
+package projectui 
+
+import (
+	"nishojib/gotrello/ui/html/layout"
+	"nishojib/gotrello/internal/data/models"
+	"github.com/google/uuid"
+	"fmt"
+)
+
+templ Show(projectName string, statuses []models.Status) {
+	@layout.App() {
+		<!-- Board info bar -->
+		<section class="flex items-center justify-between p-2">
+			<div class="flex items-center gap-2">
+				<button class="text-lg font-semibold btn btn-ghost btn-sm">
+					{ projectName }
+				</button>
+				<button class="btn btn-ghost btn-square btn-sm" aria-label="Star Board">
+					<i class="far fa-star" aria-hidden="true"></i>
+				</button>
+				<button class="btn btn-ghost btn-sm">Personal</button>
+				<button class="btn btn-ghost btn-sm">
+					<i class="mr-1 fas fa-briefcase" aria-hidden="true"></i>
+					Private
+				</button>
+			</div>
+			<button class="btn btn-ghost btn-sm">
+				<i class="mr-1 fas fa-ellipsis-h" aria-hidden="true"></i>
+				Show Menu
+			</button>
+		</section>
+		<!-- End of board info bar -->
+		<!-- Lists container -->
+		<section class="grid grid-flow-col overflow-x-auto h-[calc(100vh-5.375rem)] px-2 py-0 items-start gap-4 auto-cols-[16.875rem] scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-slate-700 scrollbar-track-slate-300">
+			for _, status := range statuses {
+				<div class="p-2 space-y-2 bg-neutral rounded-xl">
+					<h3 class="text-sm font-bold">{ status.Name }</h3>
+					<ul data-column-id={ fmt.Sprintf("column-%s", status.ID.String()) } id={ fmt.Sprintf("column-%s", status.ID.String()) } class="sortable max-h-[calc(100vh-20rem)] space-y-2 overflow-y-auto scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar scrollbar-thumb-slate-700 scrollbar-track-slate-300">
+						for _, task := range status.Tasks {
+							<li data-item-id={ fmt.Sprintf("item-%s", task.ID.String()) } class="relative p-2 transition duration-200 border border-transparent rounded-lg cursor-pointer item-card group bg-base-300 hover:border-primary htmx-swapping:opacity-0">
+								<h2 class="text-sm font-normal">{ task.Name }</h2>
+								<form hx-delete={ fmt.Sprintf("/tasks/%s", task.ID.String()) } hx-swap="outerHTML swap:0.2s" hx-target="closest .item-card" class="absolute top-1.5 right-1 transition duration-500 hidden group-hover:block">
+									<button type="submit" aria-label="Delete" class="btn btn-square btn-xs"><i class="fa-solid fa-trash"></i></button>
+								</form>
+							</li>
+						}
+					</ul>
+					<div
+						x-data="{ open: false }"
+						x-init={ fmt.Sprintf(`$watch('open', value => {
+    						if (open) {
+        						htmx.process(document.querySelector('#column-%s-add-card'))
+    						}
+						})`, status.ID.String()) }
+					>
+						<div x-transition.duration x-show="open">
+							@TaskForm(TaskParams{
+								Task: models.Task{StatusID: status.ID},
+							}, TaskErrors{})
+						</div>
+						<button
+							x-transition.duration
+							x-show="!open"
+							@click="open = true"
+							type="button"
+							class="after:content-['...'] btn btn-ghost btn-sm text-sm font-normal w-full justify-start"
+						>Add a card</button>
+					</div>
+				</div>
+			}
+			<button class="block p-2 text-sm font-bold text-left transition-colors bg-blue-400 rounded cursor-pointer hover:bg-blue-300">
+				Add a list
+			</button>
+		</section>
+	}
+}
+
+type TaskParams struct {
+	Task models.Task
+}
+
+type TaskErrors struct {
+	Name string
+}
+
+templ TaskForm(params TaskParams, err TaskErrors) {
+	if params.Task.ID != uuid.Nil {
+		<li data-item-id={ fmt.Sprintf("item-%s", params.Task.ID.String()) } class="relative p-2 transition duration-200 border border-transparent rounded-lg cursor-pointer item-card group bg-base-300 hover:border-primary htmx-swapping:opacity-0">
+			<h2 class="text-sm font-normal">{ params.Task.Name }</h2>
+			<form hx-delete={ fmt.Sprintf("/tasks/%s", params.Task.ID.String()) } hx-swap="outerHTML swap:0.2s" hx-target="closest .item-card" class="absolute top-1.5 right-1 transition duration-500 hidden group-hover:block">
+				<button type="submit" aria-label="Delete" class="btn btn-square btn-xs"><i class="fa-solid fa-trash"></i></button>
+			</form>
+		</li>
+		@scrollToBottom(fmt.Sprintf("column-%s", params.Task.StatusID.String()))
+	}
+	<form
+		id={ fmt.Sprintf("column-%s-add-card", params.Task.StatusID.String()) }
+		hx-post="/tasks"
+		hx-target={ fmt.Sprintf("#column-%s", params.Task.StatusID.String()) }
+		hx-swap="beforeend"
+		hx-swap-oob="outerHTML"
+		hx-on::after-request="this.reset();"
+		class="w-full space-y-2"
+	>
+		<input type="hidden" name="statusID" value={ params.Task.StatusID.String() }/>
+		<label class="form-control">
+			<textarea
+				x-init="$el.focus()"
+				name="name"
+				class={ "w-full p-4 text-sm shadow card card-compact bg-base-300 textarea transition-colors", templ.KV("textarea-error", len(err.Name) > 0) }
+				placeholder="Enter a title for this card"
+				@keydown.escape="edit = false"
+				@keydown.shift.enter.prevent="$refs.saveCard.click()"
+			></textarea>
+			if len(err.Name) > 0 {
+				<div class="p-1 label">
+					<span class="label-text-alt text-error">{ err.Name }</span>
+				</div>
+			}
+		</label>
+		<div class="flex items-center gap-2">
+			<button type="submit" class="btn btn-sm btn-primary">Save Card</button>
+			<button type="button" aria-label="Cancel" @click="open = false" class="btn btn-square btn-sm btn-ghost"><i class="fa solid fa-times"></i></button>
+		</div>
+	</form>
+}
+
+templ TaskCard(task models.Task) {
+	<li class="relative p-2 transition duration-200 border border-transparent rounded-lg cursor-pointer item-card group bg-base-300 hover:border-primary htmx-swapping:opacity-0">
+		<h2 class="text-sm font-normal">{ task.Name }</h2>
+		<form hx-delete={ fmt.Sprintf("/tasks/%s", task.ID.String()) } hx-swap="outerHTML swap:0.2s" hx-target="closest .item-card" class="absolute top-1.5 right-1 transition duration-500 hidden group-hover:block">
+			<button type="submit" aria-label="Delete" class="btn btn-square btn-xs"><i class="fa-solid fa-trash"></i></button>
+		</form>
+	</li>
+}
+
+script scrollToBottom(id string) {
+		const element = document.getElementById(id); 
+		element.scrollTo(0, element.scrollHeight);
+}

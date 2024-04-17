@@ -1,0 +1,634 @@
+[
+  {
+    "status": {
+      "id": "7c417800-19e0-4f7b-959c-ced79266b9a9",
+      "name": "Tasks to Do"
+    },
+    "tasks": [
+      {
+        "id": "eeaa606f-671a-40d1-b9ca-16b9e4f7d00a",
+        "name": "Complete mock-up for client website"
+      },
+      {
+        "id": "1b515be8-6057-4011-8870-38cb13a3613b",
+        "name": "Email mock-up to client for feedback"
+      },
+      {
+        "id": "b9e9f384-69ad-430b-bda9-788bd8169ef0",
+        "name": "Update personal website header background image"
+      },
+      {
+        "id": "68de6cef-96a8-4396-bccd-259a561a8c62",
+        "name": "Update personal website heading fonts"
+      },
+      {
+        "id": "eb08c94d-139a-40f0-bffc-8883410a55ba",
+        "name": "Add google map to personal website"
+      },
+      {
+        "id": "21cf7f07-d4d9-40d4-a7e6-33862edf45ad",
+        "name": "Begin draft of CSS Grid article"
+      },
+      {
+        "id": "0a3b7f46-58ad-4903-8f64-4b6545a8cf56",
+        "name": "Read new CSS-Tricks articles"
+      },
+      {
+        "id": "e5ae33c4-4131-4dda-80ce-6113057069c1",
+        "name": "Read new Smashing Magazine articles"
+      },
+      {
+        "id": "1d460459-02f1-4687-a7ab-9137311fec1c",
+        "name": "Read other bookmarked articles"
+      },
+      {
+        "id": "45fe39f8-1b46-447e-837e-80a606d35591",
+        "name": "Look through portfolios to gather inspiration"
+      },
+      {
+        "id": "5dc927a3-5d8c-492f-99a9-0a2e13eca5c9",
+        "name": "Create something cool for CodePen"
+      },
+      {
+        "id": "237c0702-8c1b-45e3-b4b6-b886260c2525",
+        "name": "Post latest CodePen work on Twitter"
+      },
+      {
+        "id": "0b57d953-608a-429c-9c00-9ab334bcf39f",
+        "name": "Listen to new Syntax.fm episode"
+      },
+      {
+        "id": "0330f270-aab8-4173-b9d2-4c56dae314cb",
+        "name": "Listen to new CodePen Radio episode"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "3e1cef94-4733-485a-bb82-6503b9bfe1f9",
+      "name": "Completed Tasks"
+    },
+    "tasks": [
+      {
+        "id": "3f380fb4-21e4-41d3-a6c1-2b1acba5aec6",
+        "name": "Clear email inbox"
+      },
+      {
+        "id": "512dd1fd-2bf3-4ed2-bbcf-c2514093a917",
+        "name": "Finalise requirements for client web design"
+      },
+      {
+        "id": "329f648b-69c5-4446-94c8-b483b74b78d4",
+        "name": "Begin work on mock-up for client website"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "08dddefb-e7e5-44a4-9528-99a80de3bd33",
+      "name": "Topics/Concepts to Revise"
+    },
+    "tasks": [
+      {
+        "id": "ea97c402-62f8-4a0f-9a7d-bcc28a621b65",
+        "name": "HTML Elements"
+      },
+      {
+        "id": "d6c07a52-7972-4337-afa6-cd6fdfa16080",
+        "name": "HTML Form Validation"
+      },
+      {
+        "id": "b6a8f5d3-d69d-41b8-824c-748d04b6636d",
+        "name": "HTML Structured Data"
+      },
+      {
+        "id": "41bddb4e-5f95-4cea-b691-3fb856171e02",
+        "name": "Advanced CSS Selectors"
+      },
+      {
+        "id": "148370ff-b301-40bd-9d47-55a5cd83f3d7",
+        "name": "CSS Transforms"
+      },
+      {
+        "id": "229d143b-62e9-4821-9d89-9fdb6056a85d",
+        "name": "CSS Animations"
+      },
+      {
+        "id": "9366ca32-8320-40b2-9213-e5f1607da604",
+        "name": "CSS Flexbox"
+      },
+      {
+        "id": "c0afdfbf-ad7b-461e-8150-e8013d0ee2ec",
+        "name": "CSS Grid"
+      },
+      {
+        "id": "3f1ff972-455a-4daa-94dd-f29343cffd16",
+        "name": "CSS Methodologies (BEM, SMACSS etc.)"
+      },
+      {
+        "id": "5930c49c-7794-4f78-adaf-b945c701a50f",
+        "name": "SASS/SCSS"
+      },
+      {
+        "id": "335efd46-260a-483f-bdb5-7c2c0cc1e2c0",
+        "name": "Layout Fallbacks"
+      },
+      {
+        "id": "c1901052-2b5d-42d0-a75a-f1052f9757c8",
+        "name": "Responsive Design"
+      },
+      {
+        "id": "650c5367-2f9b-4b58-a7b4-fa1575f83504",
+        "name": "Design Patterns"
+      },
+      {
+        "id": "4d8f1233-c64c-4a20-aff0-ad44ef9d5758",
+        "name": "JavaScript Fundamentals"
+      },
+      {
+        "id": "4e9fd41a-b0b6-4bc9-b603-76fc157bf007",
+        "name": "JavaScript OOP"
+      },
+      {
+        "id": "777a9fdc-5629-4d62-947c-84d8cc46b5d4",
+        "name": "JavaScript DOM Manipulation"
+      },
+      {
+        "id": "69c12f82-f952-49c4-8813-11daf5451171",
+        "name": "JavaScript Debugging Techniques"
+      },
+      {
+        "id": "434d44eb-31b9-4a48-b1e6-f10c69cff4d1",
+        "name": "Node Package Manager"
+      },
+      {
+        "id": "32ccadc4-74a4-4dea-976b-b415bcd8670e",
+        "name": "Grunt/Gulp"
+      },
+      {
+        "id": "404f1bfe-581b-4f34-aa10-3726c5ef2a78",
+        "name": "GitHub"
+      },
+      {
+        "id": "4b9cf241-683d-45a6-a526-57299e75b7c1",
+        "name": "Git Commands"
+      },
+      {
+        "id": "e1e44306-43d3-446c-9097-7d17d1fac944",
+        "name": "Web Accessibility"
+      },
+      {
+        "id": "1d4b7e36-82cf-4284-abdc-bef7a7dcc091",
+        "name": "Web Performance"
+      },
+      {
+        "id": "c84953a7-2b5b-4e7f-9855-f59eb5932b04",
+        "name": "Web Hosting"
+      },
+      {
+        "id": "558da8a7-c09a-4660-b4e9-534eeb97c8cd",
+        "name": "Browser Dev Tools"
+      },
+      {
+        "id": "a429c38d-7c70-4039-bcd2-ea8a6e9209ae",
+        "name": "Google Analytics"
+      },
+      {
+        "id": "92d650e7-0e6c-475f-ab0d-e1b2f930511e",
+        "name": "Basic Photoshop/Sketch Usage"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "55250d08-3422-47ce-b145-5e61a815805e",
+      "name": "Topics/Concepts to Learn"
+    },
+    "tasks": [
+      {
+        "id": "0a5c7c93-d124-4fff-a817-cf2fa0f32f63",
+        "name": "HTML 5.2 New Features"
+      },
+      {
+        "id": "11998338-a93f-4507-b190-61a7faa9ee8a",
+        "name": "Responsive Images (picture element, srcset/sizes etc.)"
+      },
+      {
+        "id": "3f47bae6-e317-4174-b26a-39a8f386eecb",
+        "name": "Serverless"
+      },
+      {
+        "id": "b91d2c73-f482-421a-952b-064fbd9fe2b0",
+        "name": "Variable Fonts"
+      },
+      {
+        "id": "fe931431-0b59-4042-8b00-c4dbc03795d0",
+        "name": "Shadow DOM"
+      },
+      {
+        "id": "c1aea253-43b3-4d23-ae8b-8385d1ff20a2",
+        "name": "ES6+"
+      },
+      {
+        "id": "18f7c715-617e-4fcb-b46b-504cfeeace02",
+        "name": "JSON & AJAX"
+      },
+      {
+        "id": "1124af41-151b-4dec-80a9-85bec2354b0a",
+        "name": "API's"
+      },
+      {
+        "id": "3ec03441-e731-4636-b1e7-7618829672d9",
+        "name": "JavaScript Patterns"
+      },
+      {
+        "id": "86cb2aa1-212f-4277-9dcf-bef38395bd6b",
+        "name": "JavaScript Testing"
+      },
+      {
+        "id": "385e2731-8fee-41bd-a1ce-0de4868e2bad",
+        "name": "jQuery"
+      },
+      {
+        "id": "308ad96f-5a88-4211-af9a-f6be7baa69c4",
+        "name": "SVG"
+      },
+      {
+        "id": "b11dfb23-84bc-43ba-b325-ccd41bf4be86",
+        "name": "React JS"
+      },
+      {
+        "id": "95feb519-2f29-4609-806a-9f141e261939",
+        "name": "Angular JS"
+      },
+      {
+        "id": "aace8c91-c498-4854-befb-455f14d3fe69",
+        "name": "TypeScript"
+      },
+      {
+        "id": "0cbe8a82-be80-4f49-8bb4-79284ab588bd",
+        "name": "Vue JS"
+      },
+      {
+        "id": "c86fa0c1-5f46-4fb7-adea-1f9bf24dbfe1",
+        "name": "Node JS"
+      },
+      {
+        "id": "6c3405b9-153b-43f1-8394-3d44dacef307",
+        "name": "Webpack"
+      },
+      {
+        "id": "f721490e-6645-4313-8c89-22a53a1ca677",
+        "name": "SEO Techniques"
+      },
+      {
+        "id": "e56e4507-ef88-42e8-ab97-003c57b61c68",
+        "name": "HTML Emails"
+      },
+      {
+        "id": "0612e1f7-0da7-4c97-b774-680c6a473c1d",
+        "name": "WordPress"
+      },
+      {
+        "id": "51b92ea9-cdea-46a3-84ff-da6d4f67543b",
+        "name": "Static Site Generators (Jekyll, Hugo, Gatsby etc.)"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "4ed23400-f877-4408-8db5-496b816b5f41",
+      "name": "Useful Websites for Learning"
+    },
+    "tasks": [
+      {
+        "id": "00814b5f-a65a-43a9-9ba6-97989f961dcf",
+        "name": "Code Academy"
+      },
+      {
+        "id": "b15f8a17-bf58-401b-9000-f4efe489c884",
+        "name": "CodePen"
+      },
+      {
+        "id": "5399815d-d7a6-45b1-ae39-6f68b2c80c03",
+        "name": "Codrops"
+      },
+      {
+        "id": "a03292d3-fa5f-4a8d-8626-25690df4de99",
+        "name": "CSS-Tricks"
+      },
+      {
+        "id": "ba17209b-c670-4e4c-bafc-0c6be7b7938e",
+        "name": "Free Code Camp"
+      },
+      {
+        "id": "bdd7ebf5-dd0e-4701-9904-12b3d379d652",
+        "name": "Khan Academy"
+      },
+      {
+        "id": "2dd7dc4f-245d-4022-9174-5c2ca7adce62",
+        "name": "Lynda"
+      },
+      {
+        "id": "b8e96629-82bc-442f-a8d4-0c6faa4473f8",
+        "name": "Medium"
+      },
+      {
+        "id": "8122b36b-0c5a-47d3-9058-a17268b134e3",
+        "name": "Mozilla Developer Network"
+      },
+      {
+        "id": "03dab9d7-95f2-423e-9471-3570a1e8bb1a",
+        "name": "Stack Overflow"
+      },
+      {
+        "id": "79fd6ed8-c4d3-4ba2-9240-ccb596d80b22",
+        "name": "Team Treehouse"
+      },
+      {
+        "id": "f38f61f0-5eed-4762-ab34-6b3aa9800fab",
+        "name": "Tuts Plus"
+      },
+      {
+        "id": "403426ce-0c34-4a0e-9e0f-5e7eb9203a61",
+        "name": "Udemy"
+      },
+      {
+        "id": "7eaf4f02-c48e-4990-8029-30d9ad716d96",
+        "name": "WPSessions"
+      },
+      {
+        "id": "c9283bc9-3409-408c-ab28-6b62c91e8a07",
+        "name": "YouTube"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "662e7e74-d3ca-4ed7-8de1-cb44c99400fb",
+      "name": "Web Dev YouTube Channels"
+    },
+    "tasks": [
+      {
+        "id": "94309fa5-33f5-41df-80cb-1074680f4378",
+        "name": "Adam Khoury"
+      },
+      {
+        "id": "333ce176-1ba3-4963-b65a-1968e7b53f59",
+        "name": "Brad Hussey"
+      },
+      {
+        "id": "1b9c2ad8-ce08-4d61-bfb4-ce9460b7c7fd",
+        "name": "CSS-Tricks (Chris Coyier)"
+      },
+      {
+        "id": "f513454f-ccec-4e85-862e-fe8b50f462ec",
+        "name": "Derek Banas"
+      },
+      {
+        "id": "eb238c0f-26af-4feb-9305-418c5b3372cf",
+        "name": "DevTips (Travis Neilson)"
+      },
+      {
+        "id": "e2756eb9-a1a1-4205-bded-ed3b0d688aec",
+        "name": "Free Code Camp"
+      },
+      {
+        "id": "5f4ba235-d61b-4904-b278-b6e70e0fec8b",
+        "name": "Fun Fun Function (Mattias Petter Johansson)"
+      },
+      {
+        "id": "7d0dba93-6b86-45b3-bf3d-75eea550f715",
+        "name": "Google Chrome Developers"
+      },
+      {
+        "id": "3f5d62bb-895e-462e-9c43-4a38a083e591",
+        "name": "Layout Land (Jen Simmons)"
+      },
+      {
+        "id": "27c49f91-a038-48f3-bb2f-5b835a4295c3",
+        "name": "Learn Code Academy"
+      },
+      {
+        "id": "1827c7b5-1f7d-49c4-9dfc-449da7bde23c",
+        "name": "Level Up Tuts (Scott Tolinski)"
+      },
+      {
+        "id": "c3b03c08-8ff6-4d65-b99a-209a346376bc",
+        "name": "Mackenzie Child"
+      },
+      {
+        "id": "428ac8c7-c430-4eba-aa17-ab08fea01855",
+        "name": "Rachel Andrew"
+      },
+      {
+        "id": "ceaa83b9-652f-49a1-a849-fa7d162ca2f0",
+        "name": "The Net Ninja (Shaun Pelling)"
+      },
+      {
+        "id": "fa329f4e-94c0-4ccd-83b2-5753e0e193b4",
+        "name": "The New Boston (Bucky Roberts)"
+      },
+      {
+        "id": "68c67b8e-b6f0-43b1-88d5-1580f811e83a",
+        "name": "Traversy Media (Brad Traversy)"
+      },
+      {
+        "id": "99cdcd1c-56f5-4221-b065-ac42283ef54e",
+        "name": "Wes Bos"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "2da5baa8-d59a-4ab6-8019-dc7ae7649ce2",
+      "name": "CodePen Ideas"
+    },
+    "tasks": [
+      {
+        "id": "a3417646-2293-42b2-bcb7-f307314c6396",
+        "name": "Something cool with CSS Grid"
+      },
+      {
+        "id": "c5792318-35a2-4496-ba01-727e57939879",
+        "name": "Something cool with CSS Flexbox"
+      },
+      {
+        "id": "513fd668-9cde-4f2b-8135-8a07467e2c52",
+        "name": "Something cool with CSS animations"
+      },
+      {
+        "id": "e18051b6-3704-4004-8e92-cb5549c72337",
+        "name": "Something cool with CSS gradients"
+      },
+      {
+        "id": "f82689a5-7bc8-4c4d-ad22-b01b753f8d7d",
+        "name": "Something cool with CSS pseudo-elements"
+      },
+      {
+        "id": "bd8372fd-1780-48c0-b2d5-cf5489560c91",
+        "name": "Something cool with SVG"
+      },
+      {
+        "id": "f8f5b6f6-1444-42a7-b6dc-034575431984",
+        "name": "Something cool with JavaScript"
+      },
+      {
+        "id": "f3df3221-ac66-4d2c-900e-3c0411a4e558",
+        "name": "Something cool with all of the above"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "b7cf8310-17a4-4313-ad69-c0307dc36044",
+      "name": "Practise Website Ideas"
+    },
+    "tasks": [
+      {
+        "id": "c95f7b79-3ae2-4c9a-b74a-f9f281312f9b",
+        "name": "Airsoft/Paintballing Centre"
+      },
+      {
+        "id": "d066455f-6e2c-4c34-b9dd-d04f09900f6a",
+        "name": "Bar/Pub"
+      },
+      {
+        "id": "5f512c4a-ff97-4883-80f6-b545437f57c5",
+        "name": "Bicycle Shop/Repair"
+      },
+      {
+        "id": "a01b3140-3be6-4a90-a3af-67fa21b57787",
+        "name": "Cafe/Coffee Shop"
+      },
+      {
+        "id": "567045d9-c22c-407c-96fd-4ec697eca1e1",
+        "name": "Car Showroom/Garage/Repair/Parts"
+      },
+      {
+        "id": "1cf21720-38e0-418b-89d2-1514f5c5b75d",
+        "name": "Construction Company"
+      },
+      {
+        "id": "0e6e696a-85f4-4a60-a460-6dbea7510fa3",
+        "name": "Fitness/Gym/Leisure Centre"
+      },
+      {
+        "id": "a7890a3a-0f45-42f3-b2c2-7955acf0f1b3",
+        "name": "Nightclub"
+      },
+      {
+        "id": "728f9dcf-5627-4450-aac0-e6b979062169",
+        "name": "Party Planning Company"
+      },
+      {
+        "id": "b64428a1-07ec-4e65-bb78-2e0866070544",
+        "name": "PC Build/Repair Service"
+      },
+      {
+        "id": "8ae606e3-630a-433f-8544-51bb812a88c6",
+        "name": "Portfolio/CV"
+      },
+      {
+        "id": "aeee78c7-a5cd-4fee-b95a-681c1c666a0a",
+        "name": "Real Estate/AirBnB"
+      },
+      {
+        "id": "4a94004b-99ab-47fb-af3b-d82c703df880",
+        "name": "Restaurant"
+      },
+      {
+        "id": "71036681-0706-4043-8cfa-8dc6cdec70a5",
+        "name": "Skiing/Snowboarding Centre/Company"
+      },
+      {
+        "id": "48a6bbba-fb0c-460c-8fad-7db0e2580709",
+        "name": "Streaming Service for Movies/TV"
+      },
+      {
+        "id": "1bcf8c78-5cd4-45ae-911a-de0b334b94cb",
+        "name": "Streaming Service for Video Games"
+      },
+      {
+        "id": "a9063c4b-3c03-49c0-9b82-216eabe4ea39",
+        "name": "Taxi Service"
+      },
+      {
+        "id": "d4d0d031-1f5b-4064-932e-faa75c52cc3e",
+        "name": "Travel Agency"
+      },
+      {
+        "id": "ad286e5b-5e95-4d05-a9c2-bf032ec274cd",
+        "name": "Zoo/Safari Park"
+      }
+    ]
+  },
+  {
+    "status": {
+      "id": "c7e41be8-6a8e-4759-bace-dc079f615e37",
+      "name": "JavaScript Project Ideas"
+    },
+    "tasks": [
+      {
+        "id": "9656b78f-e2d4-49c2-8673-3f3d579a397d",
+        "name": "Analog Clock"
+      },
+      {
+        "id": "2eb12f76-cc34-4441-aa39-8b06ed05f30d",
+        "name": "Basic Quiz"
+      },
+      {
+        "id": "8abb5858-e475-4add-a16b-036bebdd0807",
+        "name": "Bill/Cost Splitter"
+      },
+      {
+        "id": "ce0f29fd-3280-4ed7-91cf-c13125f65fcd",
+        "name": "Countdown Timer"
+      },
+      {
+        "id": "b912ff71-fdad-4361-b926-0e1a3b31a31a",
+        "name": "Form Validator"
+      },
+      {
+        "id": "cd58f62e-a480-4b27-b994-cd78e96136b5",
+        "name": "Geo-location (Find places near you etc.)"
+      },
+      {
+        "id": "0c935763-1431-4078-be2e-bde331787c0c",
+        "name": "Gif Search"
+      },
+      {
+        "id": "ab63c5e5-27ed-4750-84ba-3e36fd4a6366",
+        "name": "Note Taking App"
+      },
+      {
+        "id": "787ec663-b252-4cc0-9bc0-dcd50e8e19e5",
+        "name": "Random Name Picker"
+      },
+      {
+        "id": "d7f1f503-4414-41cb-a9e7-725fe77b58c5",
+        "name": "Secret Message Encoder/Decoder"
+      },
+      {
+        "id": "19a48dee-2397-41e0-b438-25a7e6b647d0",
+        "name": "Sortable Image Gallery"
+      },
+      {
+        "id": "91e85268-69e8-4e8a-913d-61f4437e9f95",
+        "name": "Sortable Table"
+      },
+      {
+        "id": "8dc0aa6e-5c51-451e-b3cc-c204dc5f41d4",
+        "name": "Tip Calculator"
+      },
+      {
+        "id": "d2870a2c-93ab-4fcd-a986-35b23f2128fb",
+        "name": "To-Do List"
+      },
+      {
+        "id": "efd457cf-494b-48ec-a3cc-7bde82eb91c6",
+        "name": "Unit Converter"
+      }
+    ]
+  }
+]

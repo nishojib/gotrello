@@ -1,0 +1,55 @@
+package auth
+
+import "nishojib/gotrello/ui/html/layout"
+
+templ Login() {
+	@layout.Main(false) {
+		<div class="grid h-screen place-items-center">
+			<div class="w-full max-w-lg p-8 border border-neutral bg-base-300 rounded-xl">
+				<h1 class="text-xl font-black text-center">Login to goTrello</h1>
+				<div>
+					@LoginForm(LoginParams{}, LoginErrors{})
+				</div>
+			</div>
+		</div>
+	}
+}
+
+type LoginParams struct {
+	Email string
+}
+
+type LoginErrors struct {
+	Email string
+}
+
+templ LoginForm(params LoginParams, errors LoginErrors) {
+	<form hx-post="/login" hx-swap="outerHTML">
+		<label class="w-full form-control">
+			<div class="label">
+				<span class="label-text">Email address</span>
+			</div>
+			<input name="email" type="email" autocomplete="off" class="w-full input input-bordered" value={ params.Email }/>
+			if len(errors.Email) > 0 {
+				<div class="label">
+					<span class="label-text-alt text-error">{ errors.Email }</span>
+				</div>
+			}
+		</label>
+		<button type="submit" class="w-full mt-6 btn btn-primary">Login <i class="fa-solid fa-arrow-right"></i></button>
+		<div class="divider">or</div>
+		<a href="/login/provider/google" type="button" class="w-full btn btn-outline"><i class="fa-brands fa-google"></i> Login with Google</a>
+	</form>
+}
+
+templ MagicLinkSuccess(email string) {
+	<div>An email has been sent to <span class="text-primary">{ email }</span>. Click the link in the email to login.</div>
+}
+
+templ CallbackScript() {
+	<script>
+		const url = window.location.href;
+		const newURL = url.replace("#", "?");
+		window.location = newURL;
+	</script>
+}

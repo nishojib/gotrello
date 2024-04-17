@@ -1,0 +1,31 @@
+package coreui
+
+templ AppNavigation() {
+	<header class="grid grid-cols-[auto_1fr_auto] py-0 px-2 items-center border-b border-gray-700">
+		<div class="flex gap-2">
+			<a href="/projects" class="btn btn-primary btn-sm">
+				<i class="mr-1 fab fa-trello"></i>
+				<span>Projects</span>
+			</a>
+			<label class="flex items-center gap-2 input input-bordered input-sm">
+				<input type="text" class="grow" placeholder="Search"/>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="size-4 opacity-70"><path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd"></path></svg>
+			</label>
+		</div>
+		@Logo()
+		<div class="flex items-center gap-2 text-white">
+			<button class="btn btn-square btn-outline btn-primary btn-sm " aria-label="Create">
+				<i class="fas fa-plus" aria-hidden="true"></i>
+			</button>
+			<button class="btn btn-square btn-outline btn-primary btn-sm " aria-label="Information">
+				<i class="fas fa-info-circle" aria-hidden="true"></i>
+			</button>
+			<button class="btn btn-square btn-outline btn-primary btn-sm " aria-label="Notifications">
+				<i class="fas fa-bell" aria-hidden="true"></i>
+			</button>
+			<button class="btn btn-square btn-outline btn-primary btn-sm " aria-label="User Settings">
+				<i class="fas fa-user-circle" aria-hidden="true"></i>
+			</button>
+		</div>
+	</header>
+}
