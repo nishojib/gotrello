@@ -1,4 +1,20 @@
-# Trello Clone built with golang, htmx, and AlpineJS
+# Trello Clone built with golang, Templ, htmx, AlpineJS and Supabase
+
+Disclaimer: Project uses Supabase for Authentication only. Please create a .envrc file similar to the .envrc.example and run:
+
+```
+make run/web
+```
+
+```
+make tailwind
+```
+
+```
+make templ
+```
+
+
 
 ### Features to add in goTrello
 
