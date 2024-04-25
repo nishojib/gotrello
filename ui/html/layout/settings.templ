@@ -1,0 +1,18 @@
+package layout 
+
+import "nishojib/gotrello/ui/html/core"
+
+templ Settings() {
+	@Main(true) {
+		<div>
+			<aside class="fixed h-full min-w-[300px] border-r border-gray-700">
+				@coreui.SettingsNavigation()
+			</aside>
+			<main class="h-full pl-[300px]">
+				<div class="container max-w-screen-sm p-4 mx-auto">
+					{ children... }
+				</div>
+			</main>
+		</div>
+	}
+}

@@ -6,6 +6,7 @@ import (
 	authhandler "nishojib/gotrello/internal/server/handler/auth"
 	homehandler "nishojib/gotrello/internal/server/handler/home"
 	projecthandler "nishojib/gotrello/internal/server/handler/project"
+	settingshandler "nishojib/gotrello/internal/server/handler/settings"
 	taskhandler "nishojib/gotrello/internal/server/handler/task"
 	"nishojib/gotrello/ui"
 	"time"
@@ -63,6 +64,8 @@ func Routes(db *bun.DB, sbClient *supabase.Client, rps int, limiterEnabled bool)
 
 	router.Group(func(authRouter chi.Router) {
 		authRouter.Use(requireAuth)
+
+		authRouter.Get("/settings/profile", settingshandler.Profile())
 
 		authRouter.Get("/projects", projecthandler.List(db))
 		authRouter.Get("/projects/{projectID}", projecthandler.Show(db))

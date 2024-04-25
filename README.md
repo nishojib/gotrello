@@ -1,3 +1,5 @@
+# Trello Clone built with golang, htmx, and AlpineJS
+
 ### Features to add in goTrello
 
 - [ ] CSRF Token for all forms
